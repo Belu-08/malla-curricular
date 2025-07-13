@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Malla Curricular</h1>
+
+  <table id="malla" class="display">
+    <thead>
+      <tr>
+        <th>Materia</th>
+        <th>Semestre</th>
+        <th>Previa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Matemática A</td><td>1</td><td>Ninguna</td></tr>
+      <tr><td>Química General I</td><td>1</td><td>Ninguna</td></tr>
+      <tr><td>ICB I</td><td>1</td><td>Ninguna</td></tr>
+      <tr><td>PRL</td><td>1</td><td>Ninguna</td></tr>
+      <tr><td>Matemática B</td><td>2</td><td>Matemática A</td></tr>
+      <tr><td>Matemática C</td><td>2</td><td>Matemática A</td></tr>
+      <tr><td>Química General II</td><td>2</td><td>Química General I</td></tr>
+      <tr><td>ICB II</td><td>2</td><td>ICB I</td></tr>
+      <tr><td>Física 101</td><td>2</td><td>Matemática A</td></tr>
+      <tr><td>Anatomía</td><td>2</td><td>Ninguna</td></tr>
+      <tr><td>Química Orgánica 101</td><td>3</td><td>Química General II</td></tr>
+      <tr><td>Química Analítica I</td><td>3</td><td>Química General II</td></tr>
+      <tr><td>Química Inorgánica Teórico</td><td>3</td><td>Química General II</td></tr>
+      <tr><td>Química Inorgánica Laboratorio</td><td>3</td><td>Química General II</td></tr>
+      <tr><td>Física 102</td><td>3</td><td>Física 101</td></tr>
+      <tr><td>Fisiología</td><td>3</td><td>Anatomía, ICB I</td></tr>
+      <tr><td>Química Orgánica 102</td><td>4</td><td>Química Orgánica 101 y Química Analítica I</td></tr>
+      <tr><td>Química Analítica II</td><td>4</td><td>Química Analítica I</td></tr>
+      <tr><td>Fisicoquímica 102</td><td>4</td><td>Química Analítica I, Química General II, Matemática B</td></tr>
+      <tr><td>Física 003</td><td>4</td><td>Física 102</td></tr>
+      <tr><td>Fisiopatología</td><td>4</td><td>Fisiología</td></tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#malla').DataTable({
+        "language": {
+          "search": "Buscar:",
+          "lengthMenu": "Mostrar _MENU_ materias por página",
+          "zeroRecords": "No se encontraron materias",
+          "info": "Mostrando _START_ a _END_ de _TOTAL_ materias",
+          "infoEmpty": "No hay materias para mostrar",
+          "infoFiltered": "(filtrado de _MAX_ materias totales)"
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
